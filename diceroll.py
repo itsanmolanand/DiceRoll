@@ -12,9 +12,15 @@ def int_input(sentence):
 				return number
 		except:
 			print "Not a number"
-			
-side = int_input("How many sides are on the dice? ")
-number = random.randint(1, side) 
-print "Here is the number the dice gave: %d" % (number)
+
+number_of_dice = int_input("How many dice do you want to roll? ")			
+number_of_sides = int_input("How many sides are on the dice? ")
+
+number = 0
+for dice in range(1, number_of_dice + 1):
+	number += random.randint(1, number_of_sides)
+
+print "You rolled %d dice and the number was: %d" % (number_of_dice, number)
+
 
 
