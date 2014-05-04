@@ -14,10 +14,11 @@ def int_input(sentence, min_value):
 			print "Not a number"
 
 number_of_dice = int_input("How many dice do you want to roll? ", 0)			
-number_of_sides = int_input("How many sides are on the dice? ", 1)
+#number_of_sides = int_input("How many sides are on the dice? ", 1)
 
 number = 0
 for dice in range(1, number_of_dice + 1):
+	# get the number of sides here instead
 	number += random.randint(1, number_of_sides)
 
 print "You rolled %d dice and the number was: %d" % (number_of_dice, number)
